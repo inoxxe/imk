@@ -15,7 +15,7 @@
    session_start();
 
    
-    $user = $_SESSION['user'];
+  $user = $_SESSION['user'];
 	$query = mysqli_query($db, "SELECT * FROM user WHERE nim = '$user' ");
 	$session = mysqli_fetch_assoc($query);
    	
