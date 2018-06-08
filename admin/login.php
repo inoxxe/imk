@@ -29,7 +29,7 @@
         <a class="nav-link" href="login.php">Admin</a>
       </li>
     </ul>
-    <a href="logout.php" class="btn btn-primary" >Logout</a>   
+ 
   </div>
 </nav>
 </div>
@@ -73,6 +73,9 @@
 </div>
 <div class="user">
     <div class="container">
+       <div class="card-header">
+              <h3 class="card-title">Login Admin</h3>
+            </div>
         <div class="row">
             <div class="col">
                 <div class="alert alert-primary" role="alert">
