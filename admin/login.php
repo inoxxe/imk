@@ -23,7 +23,7 @@
         <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="mahasiswa.php">Mahasiswa</a>
+        <a class="nav-link" href="../mahasiswa.php">Mahasiswa</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="login.php">Admin</a>
@@ -32,8 +32,6 @@
  
   </div>
 </nav>
-</div>
-
 <div class="wrapper">
   <div class="sambutan">
     <div class="jumbotron jumbotron-fluid">
