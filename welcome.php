@@ -135,7 +135,7 @@ if($status == "ya"){
   echo "<div class='jumbotron'>
   <h2 class='display-4'>UDINUS SEMARANG</h2>
  <h3 style=color:green;>Permintaan Kelas Diterima</h3>
-  <p class='lead'>Terima kasih "; ?><?php echo $session['nama']?><?php echo " permintaan peminjaman kelasmu untuk hari";?> <?php echo $surat['hari']?><?php echo " pada jam "; ?><?php echo $surat['jam']?><?php echo " di ruangan"; ?><?php echo $surat['kelas']?></p><?php
+  <p class='lead'>Terima kasih "; ?><?php echo $session['nama']?><?php echo " permintaan peminjaman kelasmu untuk hari";?> <?php echo $surat['hari']?><?php echo " pada jam "; ?><?php echo $surat['jam']?><?php echo " di ruangan "; ?><?php echo $surat['kelas']?></p><?php
   echo "<hr class='my-4'>
   
 </div>";
@@ -144,7 +144,7 @@ if($status == "ya"){
   echo "<div class='jumbotron'>
   <h2 class='display-4'>UDINUS SEMARANG</h2>
  <h3 style=color:red;>Permintaan Kelas TIDAK Diterima</h3>
-  <p class='lead'>Mohon maaf "; ?><?php echo $session['nama']?><?php echo " permintaan peminjaman kelasmu untuk hari";?> <?php echo $surat['hari']?><?php echo " pada jam "; ?><?php echo $surat['jam']?><?php echo " di ruangan"; ?><?php echo $surat['kelas']?></p><?php
+  <p class='lead'>Mohon maaf "; ?><?php echo $session['nama']?><?php echo " permintaan peminjaman kelasmu untuk hari";?> <?php echo $surat['hari']?><?php echo " pada jam "; ?><?php echo $surat['jam']?><?php echo " di ruangan "; ?><?php echo $surat['kelas']?></p><?php
   echo "<hr class='my-4'>
   
 </div>";

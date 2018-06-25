@@ -27,9 +27,8 @@
 </div>
 
 <div class="wrapper">
-<?php
-   session_start();
-   
+<?php   
+session_start();
   $user = $_SESSION['user'];
   $query = mysqli_query($db, "SELECT * FROM user WHERE nim = '$user' ");
   $session = mysqli_fetch_assoc($query);
@@ -38,6 +37,15 @@
       header("location:index.php");
    }
 ?>
+
+<?php
+  
+  $user = $_SESSION['user'];
+  $query = mysqli_query($db, "SELECT * FROM kelas WHERE nim = '$user' ");
+  $surat = mysqli_fetch_assoc($query);
+  $jam = $surat['jam']; 
+  $hari = $surat['hari'];
+   ?>
 
 <div class="sambutan">
 <div class="jumbotron jumbotron-fluid">
@@ -66,69 +74,102 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>H3</h3>
+                <h3>H7.1</h3>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
               </div>
-              <a href="h3.php" class="small-box-footer">Pilih <i class="fa fa-arrow-circle-right"></i></a>
+              <?php  
+                  include_once("db.php");
+                  $kelas = "h7.1";
+                  $sql = "SELECT 'kelas','jam','hari' FROM jadwal WHERE kelas = '$kelas' AND jam = '$jam' AND hari = '$hari'  ";
+                  $result = mysqli_query($db,$sql);
+                  $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+                  $count = mysqli_num_rows($result);
+                  if($count == 1) {
+                      echo "<p style=color:red;>Unavailable</p>";
+                    }else{
+                      echo "<a href='input.php?id=";?><?php echo "h7.1'"; ?><?php echo "class='small-box-footer'>Pilih <i class='fa fa-arrow-circle-right'></i></a>";
+                      echo "<p style=color:green;>Available</p>";
+                    }
+                    ?>
             </div>
           </div>
-          <!-- ./col -->
           <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-success">
-              <div class="inner">
-                <h3>
-                 H4
-                </h3>
-              </div>
-              <div class="icon">
-                <i class="ion ion-stats-bars"></i>
-              </div>
-              <a href="h4.php" class="small-box-footer">Pilih <i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-warning">
-              <div class="inner">
-                <h3>H5</h3>
-              </div>
-              <div class="icon">
-                <i class="ion ion-person-add"></i>
-              </div>
-              <a href="h5.php" class="small-box-footer">Pilih <i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-          <div class="col-lg-3 col-6">
-            <!-- small box -->
-            <div class="small-box bg-danger">
-              <div class="inner">
-                <h3>H6</h3>
-              </div>
-              <div class="icon">
-                <i class="ion ion-pie-graph"></i>
-              </div>
-              <a href="h6.php" class="small-box-footer">Pilih <i class="fa fa-arrow-circle-right"></i></a>
-            </div>
-          </div>
-          <!-- ./col -->
-           <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>H7</h3>
+                <h3>H7.2</h3>
               </div>
               <div class="icon">
-                <i class="ion ion-pie-graph"></i>
+                <i class="ion ion-bag"></i>
               </div>
-              <a href="h7.php" class="small-box-footer">Pilih <i class="fa fa-arrow-circle-right"></i></a>
+              <?php  
+                  include_once("db.php");
+                  $kelas = "h7.2";
+                  $sql = "SELECT 'kelas','jam','hari' FROM jadwal WHERE kelas = '$kelas' AND jam = '$jam' AND hari = '$hari'  ";
+                  $result = mysqli_query($db,$sql);
+                  $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+                  $count = mysqli_num_rows($result);
+                  if($count == 1) {
+                      echo "<p style=color:red;>Unavailable</p>";
+                    }else{
+                      echo "<a href='input.php?id=";?><?php echo "h7.1'"; ?><?php echo "class='small-box-footer'>Pilih <i class='fa fa-arrow-circle-right'></i></a>";
+                      echo "<p style=color:green;>Available</p>";
+                    }
+                    ?>
             </div>
           </div>
-        </div>
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3>H7.3</h3>
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+              </div>
+              <?php  
+                  include_once("db.php");
+                  $kelas = "h7.3";
+                  $sql = "SELECT 'kelas','jam','hari' FROM jadwal WHERE kelas = '$kelas' AND jam = '$jam' AND hari = '$hari'  ";
+                  $result = mysqli_query($db,$sql);
+                  $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+                  $count = mysqli_num_rows($result);
+                  if($count == 1) {
+                      echo "<p style=color:red;>Unavailable</p>";
+                    }else{
+                      echo "<a href='input.php?id=";?><?php echo "h7.1'"; ?><?php echo "class='small-box-footer'>Pilih <i class='fa fa-arrow-circle-right'></i></a>";
+                      echo "<p style=color:green;>Available</p>";
+                    }
+                    ?>
+            </div>
+          </div>
+          <div class="col-lg-3 col-6">
+            <!-- small box -->
+            <div class="small-box bg-info">
+              <div class="inner">
+                <h3>H7.4</h3>
+              </div>
+              <div class="icon">
+                <i class="ion ion-bag"></i>
+              </div>
+              <?php  
+                  include_once("db.php");
+                  $kelas = "h7.4";
+                  $sql = "SELECT 'kelas','jam','hari' FROM jadwal WHERE kelas = '$kelas' AND jam = '$jam' AND hari = '$hari'  ";
+                  $result = mysqli_query($db,$sql);
+                  $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+                  $count = mysqli_num_rows($result);
+                  if($count == 1) {
+                      echo "<p style=color:red;>Unavailable</p>";
+                    }else{
+                      echo "<a href='input.php?id=";?><?php echo "h7.1'"; ?><?php echo "class='small-box-footer'>Pilih <i class='fa fa-arrow-circle-right'></i></a>";
+                      echo "<p style=color:green;>Available</p>";
+                    }
+                    ?>
+            </div>
+          </div>
            
           </div>
         </div>
@@ -149,4 +190,3 @@
 </html>
 
 
- 
