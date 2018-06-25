@@ -16,7 +16,9 @@
         <a class="nav-link" href="admin/login.php">Admin</a>
       </li>
     </ul>
+    
 
+    <a href="logout.php" class="btn btn-primary" >Logout</a>
     
   </div>
 </nav>

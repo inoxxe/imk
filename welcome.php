@@ -12,7 +12,7 @@
 </head>
 <body>
 <div class="menu">
-<?php require_once "header.php"; ?>
+<?php require_once "header2.php"; ?>
 </div>
 
 <div class="wrapper">

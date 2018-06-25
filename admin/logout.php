@@ -1,8 +1,9 @@
 <?php
 
-require_once "db.php";
+require_once "../koneksi.php";
 
-if ( session_destroy() ){
+if ( session_destroy() )
+{
     header('Location: ../index.php');
 }
 
